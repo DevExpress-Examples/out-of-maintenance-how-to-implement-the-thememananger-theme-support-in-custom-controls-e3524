@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:dxt="http://schemas.devexpress.com/winfx/2008/xaml/core/themekeys" 
+					xmlns:local="clr-namespace:DXSample" 
+                    xmlns:controls="clr-namespace:CustomControls;assembly=CustomControls"
+                    xmlns:dxgt="http://schemas.devexpress.com/winfx/2008/xaml/grid/themekeys"
+        xmlns:dxet="http://schemas.devexpress.com/winfx/2008/xaml/editors/themekeys"
+        xmlns:dxci="http://schemas.devexpress.com/winfx/2008/xaml/core/internal">
+    <Style TargetType="{x:Type local:CustomControl2}">
+        <Setter Property="Background" Value="{dxci:ThemeResource {dxt:FloatingContainerThemeKey ResourceKey=FloatingContainerBackground}}" />
+        <Setter Property="Foreground" Value="{dxci:ThemeResource {dxgt:GridColumnHeaderThemeKey ResourceKey=GroupHeaderCaptionForeground}}" />
+        <Setter Property="BorderBrush" Value="{dxci:ThemeResource {dxgt:TableViewThemeKey ResourceKey=GroupPanelBorderBrush}}" />
+        <Setter Property="BorderThickness" Value="3" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:CustomControl2}">
+                    <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                        <TextBlock Foreground="{TemplateBinding Foreground}" HorizontalAlignment="Center" Text="{TemplateBinding Text}" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
