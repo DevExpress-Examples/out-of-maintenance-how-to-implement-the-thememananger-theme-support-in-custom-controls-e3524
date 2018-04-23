@@ -1,0 +1,38 @@
+<Window 
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+	xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" 
+	xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" 
+	xmlns:local="clr-namespace:DXSample"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Height="350" 
+	Title="MainWindow" 
+	Width="525" 
+	x:Class="DXSample.MainWindow" 
+	dx:ThemeManager.ThemeName="{Binding EditValue, ElementName=comboBoxEdit1}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <dxe:ComboBoxEdit Grid.Row="0" x:Name="comboBoxEdit1" NullText="Select a theme..." IsTextEditable="False">
+            <dxe:ComboBoxEdit.ItemsSource>
+                <x:ArrayExtension Type="sys:String">
+                    <sys:String>DeepBlue</sys:String>
+                    <sys:String>Seven</sys:String>
+                    <sys:String>LightGray</sys:String>
+                    <sys:String>MetropolisDark</sys:String>
+                    <sys:String>Office2013</sys:String>
+                </x:ArrayExtension>
+            </dxe:ComboBoxEdit.ItemsSource>
+        </dxe:ComboBoxEdit>
+        <local:CustomControl1 Grid.Row="1" Margin="5" Text="Custom control with theme-dependent styles"/>
+        <local:CustomControl2 Grid.Row="2" Margin="5" Text="Custom control with a single style using DevExpress resources"/>
+        <local:CustomControl3 Grid.Row="3" Margin="5" Text="Custom control with a single style using custom resources"/>
+        <local:CustomControl4 Grid.Row="4" Margin="5" Text="Custom control with a single style using BackgroundPanel"/>
+        <local:CustomControl5 Grid.Row="5" Margin="5" Text="Custom control with a single style using binding to a theme name"/>
+    </Grid>
+</Window>

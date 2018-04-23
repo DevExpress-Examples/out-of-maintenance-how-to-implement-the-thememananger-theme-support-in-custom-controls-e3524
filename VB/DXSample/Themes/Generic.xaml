@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/DXSample;component/Themes/CustomControl1_Resources.xaml" />
+        <ResourceDictionary Source="/DXSample;component/Themes/CustomControl2_Resources.xaml" />
+        <ResourceDictionary Source="/DXSample;component/Themes/CustomControl3_Resources.xaml" />
+        <ResourceDictionary Source="/DXSample;component/Themes/CustomControl4_Resources.xaml" />
+        <ResourceDictionary Source="/DXSample;component/Themes/CustomControl5_Resources.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
