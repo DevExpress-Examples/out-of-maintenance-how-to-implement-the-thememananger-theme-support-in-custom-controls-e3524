@@ -18,18 +18,18 @@ Imports System.Linq
 Imports System.Reflection
 
 Namespace DXSample
-    ''' <summary>
-    ''' Interaction logic for MainWindow.xaml
-    ''' </summary>
-    Partial Public Class MainWindow
-        Inherits System.Windows.Window
+	''' <summary>
+	''' Interaction logic for MainWindow.xaml
+	''' </summary>
+	Partial Public Class MainWindow
+		Inherits System.Windows.Window
 
-        Public Sub New()
-            InitializeComponent()
-        End Sub
+		Public Sub New()
+			InitializeComponent()
+		End Sub
 
-        Private Sub comboBoxEdit1_EditValueChanged(ByVal sender As Object, ByVal e As DevExpress.Xpf.Editors.EditValueChangedEventArgs)
-            ApplicationThemeHelper.ApplicationThemeName = TryCast(e.NewValue, String)
-        End Sub
-    End Class
+		Private Sub comboBoxEdit1_EditValueChanged(ByVal sender As Object, ByVal e As DevExpress.Xpf.Editors.EditValueChangedEventArgs)
+			ApplicationThemeHelper.ApplicationThemeName = TryCast(e.NewValue, String)
+		End Sub
+	End Class
 End Namespace
